@@ -184,3 +184,13 @@ with st.container():
 
     st.markdown('<div class="decoration-circle"></div>', unsafe_allow_html=True)
     st.markdown('</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<hr>
+<p style="text-align:center; opacity:0.7;">
+    Built with ❤️ using Streamlit | 
+    <a href="https://github.com/Dikshita-Kothari/CardioAi" target="_blank">
+        GitHub
+    </a>
+</p>
+""", unsafe_allow_html=True)
