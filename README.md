@@ -185,10 +185,6 @@ Contributions are welcome! Please follow these steps:
 - Update requirements.txt for new dependencies
 - Test changes locally before submitting
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 📞 Contact
 
 For questions or feedback about CardioAI, please open an issue in this repository.
