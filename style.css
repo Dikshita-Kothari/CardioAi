@@ -1,0 +1,290 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* --- ROOT VARIABLES (Monochrome) --- */
+:root {
+    --bg-main: #000000;
+    --bg-card: #0a0a0a;
+    --border-color: #ffffff;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
+    --accent: #ffffff;
+    --highlight: #333333;
+}
+
+/* --- GLOBAL STYLES --- */
+html,
+body,
+[class*="css"] {
+    font-family: 'Space Grotesk', sans-serif;
+    /* Tech/Industrial feel */
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+}
+
+/* App Background - Pure Black */
+.stApp {
+    background: var(--bg-main);
+    background-attachment: fixed;
+}
+
+/* Hide Default Elements */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* --- RESET & GEOMETRY --- */
+/* Enforce Rectangle Shape on EVERYTHING */
+* {
+    border-radius: 0px !important;
+}
+
+/* --- HEADER STYLES --- */
+.main-header {
+    text-align: center;
+    padding: 3rem 0;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 2rem;
+    background: #000;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.logo-icon {
+    font-size: 3rem;
+    filter: grayscale(100%);
+    /* Make emoji B&W */
+}
+
+.logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--text-primary);
+    border: 2px solid white;
+    padding: 5px 15px;
+}
+
+.highlight {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+/* --- MAIN CONTAINER --- */
+.glass-container {
+    background: var(--bg-main);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-top: 1rem;
+    position: relative;
+    box-shadow: none;
+    /* remove glow */
+}
+
+/* --- INPUT WIDGET STYLING (Rectangular & B/W) --- */
+
+/* Sliders */
+.stSlider>div>div>div>div {
+    background: white !important;
+    border-radius: 0 !important;
+}
+
+/* Number Inputs & Select Boxes */
+.stNumberInput input,
+.stSelectbox>div>div {
+    background-color: #000 !important;
+    border: 1px solid var(--border-color) !important;
+    color: white !important;
+    font-family: 'Space Grotesk', monospace !important;
+}
+
+.stNumberInput input:focus,
+.stSelectbox>div>div:focus {
+    background-color: #111 !important;
+    border: 2px solid white !important;
+    box-shadow: none !important;
+}
+
+.stNumberInput button {
+    border: 1px solid white !important;
+    background: black !important;
+    color: white !important;
+}
+
+/* Radio Buttons */
+.stRadio>div {
+    background-color: transparent;
+    padding: 10px 0;
+    border: none;
+}
+
+/* Radio Option Text */
+.stRadio label {
+    font-family: 'Space Grotesk', monospace;
+}
+
+/* Toggles */
+.stToggle div[role="presentation"] {
+    background: #333 !important;
+    border-radius: 0 !important;
+    /* Square toggles */
+}
+
+.stToggle div[aria-checked="true"] div[role="presentation"] {
+    background: white !important;
+}
+
+/* Headers in Form */
+h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-primary);
+    border-bottom: 2px solid white;
+    padding-bottom: 8px;
+    margin-bottom: 25px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- BUTTON STYLING --- */
+.stButton>button {
+    background: white !important;
+    color: black !important;
+    border: 1px solid white !important;
+    padding: 1rem 2rem !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase;
+    transition: all 0.2s ease !important;
+    box-shadow: 4px 4px 0px 0px #333 !important;
+    /* Brutalist shadow */
+    margin-top: 1rem;
+}
+
+.stButton>button:hover {
+    background: black !important;
+    color: white !important;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px 0px #fff !important;
+}
+
+.stButton>button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none !important;
+}
+
+/* --- RESULT CARD STYLING (Monochrome) --- */
+.result-card {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 2px solid white;
+    text-align: center;
+    position: relative;
+    background: #000;
+}
+
+/* Differentiate High/Low Risk with Patterns or Contrast */
+.result-card.high-risk {
+    background: repeating-linear-gradient(45deg,
+            #000,
+            #000 10px,
+            #111 10px,
+            #111 20px);
+    border: 4px solid white;
+}
+
+.result-card.low-risk {
+    background: #000;
+    border: 1px dashed white;
+}
+
+.risk-header {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.risk-icon {
+    font-size: 2rem;
+    filter: grayscale(100%);
+}
+
+.probability-container {
+    border: 1px solid #333;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: #000;
+}
+
+.prob-label {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.prob-value {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk', monospace;
+    color: white;
+}
+
+/* Progress Bar - Brutalist */
+.progress-bar-bg {
+    height: 20px;
+    background: #111;
+    border: 1px solid #555;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: white;
+    /* transition: width 0.5s steps(10); */
+    /* Stepped animation for retro feel */
+}
+
+.risk-message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+    font-family: monospace;
+}
+
+/* --- DECORATION --- */
+.decoration-circle {
+    display: none;
+    /* Remove circles, keep it geometric */
+}
